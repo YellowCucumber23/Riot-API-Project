@@ -27,9 +27,11 @@ def getChallengerData():
             nameList = match_data['metadata']['participants']
             for i in range(len(nameList)):
                 if nameList[i] == summoner['puuid']:
-                    role = match_data['info']['participants'][i]['role']
-                    lane = match_data['info']['participants'][i]['lane']
-                    print(role, lane, summoner['name'])
+                    role = match_data['info']['participants'][i]['teamPosition']
+                    win = match_data['info']['participants'][i]['win']
+                    if role == "UTILITY":
+                        role = "SUPPORT"
+                    print(role, summoner['name'], win)
             counter+=1
 
 # Returns summoner profile by name SummonerDTO/dict
@@ -46,7 +48,7 @@ def getSummonerProfilePUUID(puuid):
 
 # Returns list of match ID
 def getMatchHistory(puuid, numGames):
-    URL = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/" + puuid + "/ids?start=0&count=" + str(numGames) + "&api_key=" + KEY
+    URL = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/" + puuid + "/ids?queue=420&start=0&count=" + str(numGames) + "&api_key=" + KEY
     response = requests.get(URL)
     return response.json()
 
@@ -56,17 +58,10 @@ def getMatchData(matchID):
     response = requests.get(URL)
     return response.json()
 
+# Returns match timeline
+def getMatchTimeline(matchID):
+    URL = "https://americas.api.riotgames.com/lol/match/v5/matches/" + matchID + "timeline?api_key=" + KEY
+    response = requests.get(URL)
+    return response.json()
 
 getChallengerData()
-print("done")
-# me = getSummonerProfile("WxXjL1AvdgEzGovLQhFDcryd0lv2lVqtsSA_BgFKgk2JvBo")
-# history = getMatchHistory(me['puuid'], 5)
-# matchData = getMatchData(history[0])
-# nameList = matchData['metadata']['participants']
-# print(nameList)
-
-#Print summoner role with name
-# for i in range(10):
-#     name = (getSummonerProfilePUUID(nameList[i]))['gameName']
-#     role = data['info']['participants'][i]['role']
-#     print(role,name)
