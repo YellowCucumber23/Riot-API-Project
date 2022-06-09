@@ -1,8 +1,9 @@
 import requests
 import json
 import time
+import roleml
 
-KEY = "RGAPI-349c9d6f-8808-4e15-8568-039bea0ca5f3"
+KEY = "RGAPI-dccf168a-1996-4d04-afa5-ae5817e1b461"
 
 # Get Challenger Players
 def getChallengerData():
@@ -12,7 +13,7 @@ def getChallengerData():
     summonerProfile = []
     
     # For each entry, get summoner id and add to array
-    for i in range(len(file['entries'])/20):          # Get challenger players
+    for i in range(int(len(file['entries'])/20)):          # Get challenger players
         summonerID = file['entries'][i]['summonerId']
         summonerProfile.append(summonerID)
     counter = 0
@@ -23,17 +24,13 @@ def getChallengerData():
         match_history = getMatchHistory(summoner['puuid'], 5)
         for match in match_history:    # For each match in match history, get role played
             match_data = getMatchData(match)
-            try:
-                nameList = match_data['metadata']['participants']
-            except:
-                print(match_data)
-            else:
-                print("Successful", counter)
-                counter+=1
-            # for i in range(len(nameList)):
-            #     if nameList[i] == summoner['puuid']:
-            #         role = match_data['info']['participants'][i]['role']
-            #         print(role, summoner['name'])
+            nameList = match_data['metadata']['participants']
+            for i in range(len(nameList)):
+                if nameList[i] == summoner['puuid']:
+                    role = match_data['info']['participants'][i]['role']
+                    lane = match_data['info']['participants'][i]['lane']
+                    print(role, lane, summoner['name'])
+            counter+=1
 
 # Returns summoner profile by name SummonerDTO/dict
 def getSummonerProfile(summonerID):

@@ -1,124 +1,75 @@
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-{u'status': {u'status_code': 429, u'message': u'Rate limit exceeded'}}
-{u'status': {u'status_code': 429, u'message': u'Rate limit exceeded'}}
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-{u'status': {u'status_code': 429, u'message': u'Rate limit exceeded'}}
-{u'status': {u'status_code': 429, u'message': u'Rate limit exceeded'}}
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
-('Successful', 0)
+DUO MIDDLE Zev
+SUPPORT MIDDLE Zev
+SUPPORT NONE Zev
+CARRY TOP Zev
+DUO TOP Zev
+NONE JUNGLE FrosFores
+SOLO TOP FrosFores
+NONE JUNGLE FrosFores
+SUPPORT TOP FrosFores
+NONE JUNGLE FrosFores
+DUO NONE crazy thursday4
+NONE JUNGLE crazy thursday4
+CARRY BOTTOM crazy thursday4
+CARRY BOTTOM crazy thursday4
+DUO MIDDLE crazy thursday4
+CARRY NONE CLG Airren
+CARRY BOTTOM CLG Airren
+CARRY BOTTOM CLG Airren
+CARRY BOTTOM CLG Airren
+DUO TOP CLG Airren
+NONE JUNGLE Kitzuo
+NONE JUNGLE Kitzuo
+SUPPORT NONE Kitzuo
+NONE JUNGLE Kitzuo
+SUPPORT NONE Kitzuo
+DUO MIDDLE tibs2
+SUPPORT NONE tibs2
+SOLO TOP tibs2
+SUPPORT NONE tibs2
+SOLO TOP tibs2
+CARRY BOTTOM KeriaMingTankMan
+CARRY BOTTOM KeriaMingTankMan
+SOLO MIDDLE KeriaMingTankMan
+SOLO BOTTOM KeriaMingTankMan
+SUPPORT NONE KeriaMingTankMan
+SOLO MIDDLE RBOMLDR
+SOLO TOP RBOMLDR
+SOLO MIDDLE RBOMLDR
+SOLO TOP RBOMLDR
+SOLO TOP RBOMLDR
+DUO TOP aristootle
+SOLO TOP aristootle
+SOLO TOP aristootle
+SUPPORT BOTTOM aristootle
+SOLO MIDDLE aristootle
+CARRY MIDDLE kimchi jg
+DUO NONE kimchi jg
+SOLO TOP kimchi jg
+SUPPORT NONE kimchi jg
+SUPPORT NONE kimchi jg
+SUPPORT MIDDLE FLY Johnsun
+CARRY BOTTOM FLY Johnsun
+SUPPORT NONE FLY Johnsun
+CARRY BOTTOM FLY Johnsun
+SUPPORT NONE FLY Johnsun
+SOLO MIDDLE bizzy banks
+SUPPORT BOTTOM bizzy banks
+SUPPORT BOTTOM bizzy banks
+CARRY BOTTOM bizzy banks
+SUPPORT BOTTOM bizzy banks
+SUPPORT NONE picapicaa
+SUPPORT BOTTOM picapicaa
+SUPPORT BOTTOM picapicaa
+SUPPORT BOTTOM picapicaa
+SUPPORT BOTTOM picapicaa
+NONE JUNGLE mabigan
+NONE JUNGLE mabigan
+NONE JUNGLE mabigan
+NONE JUNGLE mabigan
+SOLO MIDDLE mabigan
+SUPPORT NONE kookykrook
+SUPPORT NONE kookykrook
+SOLO MIDDLE kookykrook
+SUPPORT NONE kookykrook
+DUO TOP kookykrook
