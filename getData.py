@@ -1,9 +1,8 @@
 import requests
 import json
 import time
-import roleml
 
-KEY = "RGAPI-dccf168a-1996-4d04-afa5-ae5817e1b461"
+KEY = "RGAPI-10f0aa27-8ecf-493b-b7e2-ce4c96991255"
 
 # Get Challenger Players
 def getChallengerData():
@@ -11,6 +10,8 @@ def getChallengerData():
     response = requests.get(URL)
     file = response.json()  # Get data
     summonerProfile = []
+    role_dict = []
+    win_dict = []
     
     # For each entry, get summoner id and add to array
     for i in range(int(len(file['entries'])/20)):          # Get challenger players
@@ -24,6 +25,7 @@ def getChallengerData():
         match_history = getMatchHistory(summoner['puuid'], 5)
         for match in match_history:    # For each match in match history, get role played
             match_data = getMatchData(match)
+            # print(match_data)
             nameList = match_data['metadata']['participants']
             for i in range(len(nameList)):
                 if nameList[i] == summoner['puuid']:
@@ -31,9 +33,11 @@ def getChallengerData():
                     win = match_data['info']['participants'][i]['win']
                     if role == "UTILITY":
                         role = "SUPPORT"
-                    print(role, summoner['name'], win)
+                    role_dict.append(role)
+                    win_dict.append(win)
+                    print(summoner['name'], role, win)
             counter+=1
-
+    return(role_dict, win_dict)
 # Returns summoner profile by name SummonerDTO/dict
 def getSummonerProfile(summonerID):
     URL = "https://na1.api.riotgames.com/lol/summoner/v4/summoners/" + summonerID + "?api_key=" + KEY
@@ -64,4 +68,17 @@ def getMatchTimeline(matchID):
     response = requests.get(URL)
     return response.json()
 
-getChallengerData()
+if __name__ == "__main__":
+    roles, wins = getChallengerData()
+    dict = {
+        "win": [],
+        "lose" : []
+    }
+    for i in range(len(wins)):
+        if wins[i] == True:
+            dict['win'].append(roles[i])
+        else:
+            dict['lose'].append(roles[i])
+    
+    with open('data.json', 'w+') as f:
+        json.dump(dict, f, indent = 2)
