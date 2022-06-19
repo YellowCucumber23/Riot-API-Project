@@ -5,7 +5,7 @@ from getData import getChallengerData
 app = Flask(__name__)
 
 # Members API Route
-@app.route("/")
+@app.route("/api")
 def data():
     with open('data.json','r') as f:
         json_string = json.load(f)
