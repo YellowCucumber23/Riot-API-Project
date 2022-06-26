@@ -3,14 +3,27 @@ h1.Gamer{
 }
 button.noot{
   background-color: #000000; 
-  border: solid;
   color: white;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
   transition-duration: 0.8s;
+  align-self: center;
+}
+.container {
+  height: 50px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 button.noot:hover{
