@@ -34,7 +34,12 @@ export const data = {
 const DoughnutChart = () => {
     return (
         <div>
-            <Doughnut data={data}/>
+            <Doughnut data={data}
+            width = {800}
+            height = {500}
+            options = {{
+                maintainAspectRatio: false,
+            }}/>
         </div>
     )
 };
