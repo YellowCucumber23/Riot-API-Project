@@ -1,6 +1,6 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
-import DoughnutChart from './components/DoughnutChart';
+import RolesDoughnutChart from './components/RolesDoughnutChart';
 
 function App() {
 
@@ -24,17 +24,7 @@ function App() {
             Refresh Page!</button>
         </div>
       </div>
-      <DoughnutChart></DoughnutChart>
-      {/* <h1 class = "Gamer">Wins</h1> */}
-
-      {(typeof data.win == 'undefined') ? (
-        <p>Loading....</p>
-      ) : (
-        data.win.map((win,i) => (
-          <p key={i}>{win}</p>
-        ))
-      )}
-  
+      <RolesDoughnutChart></RolesDoughnutChart>
     </div>
 
   );
