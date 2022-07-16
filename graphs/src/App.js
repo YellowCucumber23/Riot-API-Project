@@ -1,6 +1,12 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 import RolesDoughnutChart from './components/RolesDoughnutChart';
+import TopDoughnutChart from './components/TopDoughnutChart';
+import JungleDoughnutChart from './components/JungleDoughnutChart';
+import MidDoughnutChart from './components/MidDoughnutChart';
+import BottomDoughnutChart from './components/BottomDoughnutChart';
+import SupportDoughnutChart from './components/SupportDoughnutChart';
+
 
 function App() {
 
@@ -24,15 +30,26 @@ function App() {
             Refresh Data!</button>
         </div>
       </div>
-      <RolesDoughnutChart></RolesDoughnutChart>
 
-      {(typeof data.win === 'undefined') ? (
+      <RolesDoughnutChart></RolesDoughnutChart>
+      <h1>Top</h1>
+      <TopDoughnutChart></TopDoughnutChart>
+      <h1>Jungle</h1>
+      <JungleDoughnutChart></JungleDoughnutChart>
+      <h1>Mid</h1>
+      <MidDoughnutChart></MidDoughnutChart>
+      <h1>Bottom</h1>
+      <BottomDoughnutChart></BottomDoughnutChart>
+      <h1>Support</h1>
+      <SupportDoughnutChart></SupportDoughnutChart>
+
+      {/* {(typeof data.win === 'undefined') ? (
         <p>Loading...</p>
       ) : (
           data.win.map((win, i) => (
             <p key={i}>{win}</p>
           ))
-      )}
+      )} */}
     </div>
 
   );
