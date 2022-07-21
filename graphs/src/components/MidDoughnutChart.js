@@ -21,11 +21,13 @@ const DoughnutChart = () => {
         let wins = Object.entries(data)[0][1]
         let loss = Object.entries(data)[1][1]
         for(let i = 0; i < wins.length; i++){
-            if (wins[i] === "MID"){win++}
+            if (wins[i] === "MIDDLE"){win++}
           }
           for(let i = 0; i < loss.length; i++){
-            if (loss[i] === "MID"){lose++}
+            if (loss[i] === "MIDDLE"){lose++}
           }
+          console.log(wins)
+          console.log(loss)
       }
     )
       }, [])
