@@ -1,4 +1,8 @@
-button.noot{
+html{
+  scroll-behavior: smooth;
+}
+
+button.reload{
   background-color: #000000; 
   color: white;
   padding: 10px;
@@ -6,8 +10,12 @@ button.noot{
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
-  transition-duration: 0.8s;
+  transition-duration: 0.5s;
   align-self: center;
+}
+button.reload:hover{
+  background-color: #ffffff;
+  color: black;
 }
 .container {
   height: 50px;
@@ -23,11 +31,46 @@ button.noot{
   transform: translate(-50%, -50%);
 }
 
-button.noot:hover{
+h3{
+  text-align: center;
+}
+
+.scrollButton {
+  background-color: dodgerblue;
+  color: white;
+  padding: 16px;
+  height: 64px;
+  transition-duration: 0.5s;
+
+}
+button.scrollButton:hover{
   background-color: #ffffff;
   color: black;
 }
 
-h1{
-  text-align: center;
+.grid-container {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 16px; 
+}
+.grid-item {
+  background-color: dodgerblue;
+  color: white;
+  padding: 16px;
+  height: 64px;
+}
+
+@media (min-width: 300px) {
+  .grid-container { grid-template-columns: repeat(1,1fr); }
+  .scrollButton {width: 100%;}
+}
+@media (min-width: 600px) {
+  .grid-container { grid-template-columns: repeat(2,1fr); }
+  .scrollButton {width: 100%;}
+}
+
+@media (min-width: 900px) {
+  .grid-container { grid-template-columns: repeat(3, 1fr); }
+  .scrollButton {width: 100%;}
 }

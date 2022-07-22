@@ -26,8 +26,6 @@ const DoughnutChart = () => {
           for(let i = 0; i < loss.length; i++){
             if (loss[i] === "MIDDLE"){lose++}
           }
-          console.log(wins)
-          console.log(loss)
       }
     )
       }, [])
