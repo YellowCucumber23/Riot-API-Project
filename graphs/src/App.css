@@ -31,6 +31,10 @@ button.reload:hover{
   transform: translate(-50%, -50%);
 }
 
+h1{
+  text-align: center;
+}
+
 h3{
   text-align: center;
 }

@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useRef} from 'react';
 import RolesDoughnutChart from './components/RolesDoughnutChart';
 import TopDoughnutChart from './components/TopDoughnutChart';
 import JungleDoughnutChart from './components/JungleDoughnutChart';
@@ -9,11 +9,20 @@ import SupportDoughnutChart from './components/SupportDoughnutChart';
 
 
 function App() {
-  const rolesRef = useRef(null);
-  const scrollToRoles = () => rolesRef.current.scrollIntoView();
-  const useMountEffect = fun => useEffect(fun, []);
-  useMountEffect(scrollToRoles);
   
+  const rolesRef = useRef(null);
+  const topRef = useRef(null)
+  const jungleRef = useRef(null)
+  const midRef = useRef(null)
+  const botRef = useRef(null)
+  const supportRef = useRef(null)
+
+  const scrollToRoles = () => rolesRef.current.scrollIntoView();  
+  const scrollToTop = () => topRef.current.scrollIntoView();
+  const scrollToJungle = () => jungleRef.current.scrollIntoView();
+  const scrollToMid = () => midRef.current.scrollIntoView();
+  const scrollToBot = () => botRef.current.scrollIntoView();
+  const scrollToSupport = () => supportRef.current.scrollIntoView();
 
   return (
     <div>
@@ -24,42 +33,46 @@ function App() {
         </div>
       </div>
 
+      {/*Buttons at top of screen*/}
       <div className = "grid-container">
         <div className = "grid-item">
-          {/* <h2>Roles</h2> */}
           <button className = "scrollButton" onClick= {scrollToRoles}>Roles</button>
-          {/* <RolesDoughnutChart/> */}
         </div>
 
         <div className = "grid-item">
-        <button className = "scrollButton">TOP</button>
-          {/* <TopDoughnutChart/> */}
+        <button className = "scrollButton" onClick= {scrollToTop}>TOP</button>
         </div>
 
         <div className = "grid-item">
-        <button className = "scrollButton">JUNGLE</button>
-          {/* <JungleDoughnutChart/> */}
+        <button className = "scrollButton" onClick= {scrollToJungle}>JUNGLE</button>
         </div>
 
         <div className = "grid-item">
-        <button className = "scrollButton">MIDDLE</button>
-          {/* <MidDoughnutChart/> */}
+        <button className = "scrollButton" onClick= {scrollToMid}>MIDDLE</button>
         </div>
 
         <div className = "grid-item">
-        <button className = "scrollButton">BOTTOM</button>
-          {/* <BottomDoughnutChart/> */}
+        <button className = "scrollButton" onClick= {scrollToBot}>BOTTOM</button>
         </div>
 
         <div className = "grid-item">
-        <button className = "scrollButton">SUPPORT</button>
-          {/* <SupportDoughnutChart/> */}
+        <button className = "scrollButton" onClick= {scrollToSupport}>SUPPORT</button>
         </div>
       </div>
 
       <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
-
-      <h1 ref={rolesRef}>hi</h1>
+      <h1 ref={rolesRef}>Roles</h1>
+      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <h1 ref={topRef}>Top</h1>
+      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <h1 ref={midRef}>Mid</h1>
+      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <h1 ref={jungleRef}>Jungle</h1>
+      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <h1 ref={botRef}>Bottom</h1>
+      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <h1 ref={supportRef}>Support</h1>
+      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
 
     </div>
 
