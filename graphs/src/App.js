@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useRef} from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import RolesDoughnutChart from './components/RolesDoughnutChart';
 import TopDoughnutChart from './components/TopDoughnutChart';
 import JungleDoughnutChart from './components/JungleDoughnutChart';
@@ -17,13 +17,14 @@ function App() {
   const botRef = useRef(null)
   const supportRef = useRef(null)
 
+
   const scrollToRoles = () => rolesRef.current.scrollIntoView();  
   const scrollToTop = () => topRef.current.scrollIntoView();
   const scrollToJungle = () => jungleRef.current.scrollIntoView();
   const scrollToMid = () => midRef.current.scrollIntoView();
   const scrollToBot = () => botRef.current.scrollIntoView();
   const scrollToSupport = () => supportRef.current.scrollIntoView();
-
+  
   return (
     <div>
       <div className="container">
@@ -59,23 +60,22 @@ function App() {
         <button className = "scrollButton" onClick= {scrollToSupport}>SUPPORT</button>
         </div>
       </div>
-
-      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
-      <h1 ref={rolesRef}>Roles</h1>
-      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <h1 ref={rolesRef}> All Roles</h1>
+      <RolesDoughnutChart/>
       <h1 ref={topRef}>Top</h1>
-      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <TopDoughnutChart/>
       <h1 ref={midRef}>Mid</h1>
-      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <MidDoughnutChart/>
       <h1 ref={jungleRef}>Jungle</h1>
-      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <JungleDoughnutChart/>
       <h1 ref={botRef}>Bottom</h1>
-      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <BottomDoughnutChart/>
       <h1 ref={supportRef}>Support</h1>
-      <div style={{ height: 1500 }} /> {/* just to demonstrate scroll*/}
+      <SupportDoughnutChart/>
 
     </div>
 
   );
 }
+
 export default App;

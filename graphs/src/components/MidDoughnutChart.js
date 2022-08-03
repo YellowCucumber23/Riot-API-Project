@@ -5,7 +5,7 @@ import './RolesDoughnutChart.css';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-var win, lose
+export var win, lose
 win = lose = 0
 
 

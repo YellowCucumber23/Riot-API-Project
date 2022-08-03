@@ -1,0 +1,25 @@
+.column {
+    float: left;
+    width: 50%;
+    height: 500px;
+    /* outline: solid; */
+  }
+  
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tag {
+    font-size: 25px;
+    text-align: center;
+    line-height: 400px;
+   }
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}

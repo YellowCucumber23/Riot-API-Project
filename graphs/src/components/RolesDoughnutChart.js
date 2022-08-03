@@ -5,9 +5,10 @@ import './RolesDoughnutChart.css';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-var top, jungle, mid, adc, support
-top = jungle = mid = adc = support = 0
-
+var roles = ['Top', 'Jungle', 'Middle', 'ADC', 'Support']
+var rolesArray = [0,0,0,0,0]
+var rolesMap = {}
+let mostPlayed, maxValue
 
 const DoughnutChart = () => {
   const [chartData, setChartData] = useState([{}])
@@ -21,20 +22,25 @@ const DoughnutChart = () => {
         let wins = Object.entries(data)[0][1]
         let loss = Object.entries(data)[1][1]
         for(let i = 0; i < wins.length; i++){
-          if (wins[i] === "TOP"){top++}
-          if (wins[i] === "JUNGLE"){jungle++}
-          if (wins[i] === "MIDDLE"){mid++}
-          if (wins[i] === "BOTTOM"){adc++}
-          if (wins[i] === "SUPPORT"){support++}
+          if (wins[i] === "TOP"){rolesArray[0]++}
+          if (wins[i] === "JUNGLE"){rolesArray[1]++}
+          if (wins[i] === "MIDDLE"){rolesArray[2]++}
+          if (wins[i] === "BOTTOM"){rolesArray[3]++}
+          if (wins[i] === "SUPPORT"){rolesArray[4]++}
         }
         for(let i = 0; i < loss.length; i++){
-          if (loss[i] === "TOP"){top++}
-          if (loss[i] === "JUNGLE"){jungle++}
-          if (loss[i] === "MIDDLE"){mid++}
-          if (loss[i] === "BOTTOM"){adc++}
-          if (loss[i] === "SUPPORT"){support++}
+          if (loss[i] === "TOP"){rolesArray[0]++}
+          if (loss[i] === "JUNGLE"){rolesArray[1]++}
+          if (loss[i] === "MIDDLE"){rolesArray[2]++}
+          if (loss[i] === "BOTTOM"){rolesArray[3]++}
+          if (loss[i] === "SUPPORT"){rolesArray[4]++}
         }
-      }
+        rolesArray.forEach((element, index) => {
+          rolesMap[element] = roles[index];
+        })
+        maxValue = Object.keys(rolesMap).reduce(function(a, b){ return rolesMap[a] > rolesMap[b] ? a : b });
+        mostPlayed = rolesMap[maxValue]
+      },
     )
       }, [])
       const data = {
@@ -42,7 +48,7 @@ const DoughnutChart = () => {
         datasets: [
           {
             label: '# of Votes',
-            data: [top, jungle, mid, adc, support],
+            data: [rolesArray[0], rolesArray[1], rolesArray[2], rolesArray[3], rolesArray[4]],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -66,7 +72,8 @@ const DoughnutChart = () => {
 
 
     return (
-        <div>
+      <div className = "row">
+        <div className = "column">
             <Doughnut data={data}
             height={500}
             width={800}
@@ -74,7 +81,11 @@ const DoughnutChart = () => {
                 maintainAspectRatio: false
             }}/>
         </div>
+
+        <div className = "column">
+          <p className = 'tag'>The most played role is {mostPlayed} with {maxValue} games played</p>
+        </div>
+      </div>
     )
 };
-
 export default DoughnutChart;

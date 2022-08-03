@@ -5,8 +5,8 @@ import './RolesDoughnutChart.css';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-var win, lose
-win = lose = 0
+export var topWin, topLose
+topWin = topLose = 0
 
 
 const DoughnutChart = () => {
@@ -21,10 +21,10 @@ const DoughnutChart = () => {
         let wins = Object.entries(data)[0][1]
         let loss = Object.entries(data)[1][1]
         for(let i = 0; i < wins.length; i++){
-            if (wins[i] === "TOP"){win++}
+            if (wins[i] === "TOP"){topWin++}
           }
           for(let i = 0; i < loss.length; i++){
-            if (loss[i] === "TOP"){lose++}
+            if (loss[i] === "TOP"){topLose++}
           }
       }
     )
@@ -34,7 +34,7 @@ const DoughnutChart = () => {
         datasets: [
           {
             label: '# of Votes',
-            data: [win, lose],
+            data: [topWin, topLose],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
