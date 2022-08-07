@@ -7,7 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export var win, lose
 win = lose = 0
-
+let winRate
 
 const DoughnutChart = () => {
   const [chartData, setChartData] = useState([{}])
@@ -26,6 +26,7 @@ const DoughnutChart = () => {
           for(let i = 0; i < loss.length; i++){
             if (loss[i] === "BOTTOM"){lose++}
           }
+          winRate = Math.round((win / (win + lose)) * 100.0 * 100.0) / 100.0
       }
     )
       }, [])
@@ -50,7 +51,8 @@ const DoughnutChart = () => {
 
 
     return (
-        <div>
+      <div className = "row">
+        <div className = "column">
             <Doughnut data={data}
             height={500}
             width={800}
@@ -58,6 +60,11 @@ const DoughnutChart = () => {
                 maintainAspectRatio: false
             }}/>
         </div>
+
+        <div className = "column">
+          <p className = 'tag'>The win rate of ADC is {winRate}%</p>
+        </div>
+      </div>
     )
 };
 

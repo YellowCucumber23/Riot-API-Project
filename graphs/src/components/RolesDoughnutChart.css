@@ -3,7 +3,8 @@
     width: 50%;
     height: 500px;
     /* outline: solid; */
-  }
+    text-align: center;
+}
   
 /* Clear floats after the columns */
 .row:after {
@@ -14,9 +15,10 @@
 
 .tag {
     font-size: 25px;
-    text-align: center;
-    line-height: 400px;
-   }
+    /* text-align: center; 
+    vertical-align: middle;
+    display: table-cell;    */
+}
 
 @media screen and (max-width: 600px) {
     .column {

@@ -2,7 +2,7 @@ import requests
 import json
 import time
 
-KEY = "RGAPI-465c5e0c-1837-434c-ab2e-b4266acdfaef"
+KEY = "RGAPI-52296899-9821-47ca-913b-2cc606c3da63"
 
 # Get Challenger Players
 def getChallengerData():
