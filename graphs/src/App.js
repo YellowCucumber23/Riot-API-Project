@@ -30,7 +30,7 @@ function App() {
       <div className="container">
         <div className="center">
           <button onClick= {() => window.location.reload(false)} className = "reload">
-            Refresh Data!  a a a a a</button>
+            Refresh Data!</button>
         </div>
       </div>
 
