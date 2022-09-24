@@ -1,5 +1,6 @@
-Clone repositories then run:
+Clone repositories then install packages and independencies using:
 ```
 npm install
 ```
-to install all packages
+
+After run server.py first and then run App.js
