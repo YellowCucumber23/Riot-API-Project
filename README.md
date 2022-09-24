@@ -1,1 +1,5 @@
-Clone repositories then run npm install
+Clone repositories then run:
+```
+npm install
+```
+to install all packages
