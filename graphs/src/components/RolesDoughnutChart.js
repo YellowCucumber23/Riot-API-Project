@@ -82,7 +82,7 @@ const DoughnutChart = () => {
             }}/>
         </div>
 
-        <div className = "column">
+        <div className = " column">
           <p className = 'tag'>The most played role is {mostPlayed} with {maxValue} games played</p>
         </div>
       </div>
