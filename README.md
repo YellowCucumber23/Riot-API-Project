@@ -5,4 +5,7 @@ npm install
 
 After run server.py first and then run App.js
 
-See Example.png for an example of the graphs
+### Example of a Graph
+![Alt text](Example.png?raw=true "Title")
+
+There are graphs for every role
